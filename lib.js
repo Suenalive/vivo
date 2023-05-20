@@ -22979,9 +22979,9 @@ async function publishScreen2(constraints, audioList=[], audio=true, overrideFra
 	if (!navigator.mediaDevices.getDisplayMedia){
 		setTimeout(function(){
 			if (iOS || iPad){
-				warnUser("Sorry, but your iOS browser does not support screen-sharing.\n\nPlease see <a href='https://docs.vdo.ninja/guides/screen-share-your-iphone-ipad' target='_blank'>this guide</a> for an alternative method to do so.", false, false);
+				warnUser("Sorry, but your iOS browser does not support screen-sharing.", false, false);
 			} else if (session.mobile){
-				warnUser("Sorry, your browser does not support screen-sharing.\n\nThe <a href='https://docs.vdo.ninja/getting-started/native-mobile-app-versions#android-download-link' target='_blank'>Android native app</a> should support it though.", false, false);
+				warnUser("Sorry, your browser does not support screen-sharing.", false, false);
 			} else {
 				warnUser("Sorry, your browser does not support screen-sharing.\n\nPlease use the desktop versions of Firefox or Chrome instead.");
 			}
