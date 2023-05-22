@@ -30,7 +30,7 @@ var miscTranslations = {
 	"director-redirect-2": "\n\nPress OK to be redirected.",
 	"add-a-label": "Add a label",
 	"audio-processing-disabled": "Audio processing is disabled with this guest. Can't mute or change volume",
-	"not-the-director": "<span color='red'>You are not the director of this room. You will have limited to no control. See <a target='_blank' href='https://docs.vdo.ninja/director-settings/codirector'>&codirector</a> on how to become a co-director.</span>",
+	"not-the-director": "<span color='red'>You are not the director of this room. You will have limited to no control. See <a target='_blank' href='#'>&codirector</a> on how to become a co-director.</span>",
 	"room-is-claimed": "The room is already claimed by someone else.\n\nOnly the first person to join a room is the assigned director.\n\nRefresh after the first director leaves to claim.",
 	"token-room-is-claimed": "The room is claimed by someone else.\n\nJoin as a guest or co-director instead.",
 	"room-is-claimed-codirector": "The room is already claimed by someone else.\n\nTrying to join as a co-director...",
@@ -99,7 +99,7 @@ var miscTranslations = {
 	"no-screen-share-supported": "Sorry, your browser does not support screen-sharing.\n\nPlease use the desktop versions of Firefox or Chrome instead.",
 	"speech-not-suppoted": "⚠ Speech Recognition is not supported by this browser",
 	"blue-yeti-tip": "<i>Tip:</i> Blue Yeti microphones may experience issues being overly loud. <a href='https://support.google.com/chrome/thread/7542181?hl=en&msgid=79691143'>Please see here</a> for a solution or disable auto-gain in.",
-	"site-not-responsive": "<h3>Notice: The system cannot be accessed or is currently slow to respond.</h3>\nIf a routing issue, try adding  to the URL; you can also try or a VPN if the service is blocked in your country.\n\nIf the main service is down, a backup version is also available here: <i>https://backup.vdo.ninja</i>\n\nContact steve@seguin.email for added help.\n\nThis service requires the use of Websockets over port 443.",
+	"site-not-responsive": "<h3>Notice: The system cannot be accessed or is currently slow to respond.</h3>\nIf a routing issue, try adding  to the URL; you can also try or a VPN if the service is blocked in your country.\n\nIf the main service is down, a backup version is also available here: <i>#</i>\n\nContact steve@seguin.email for added help.\n\nThis service requires the use of Websockets over port 443.",
 	"no-audio-source-detected": "No Audio Source was detected.\n\nIf you were wanting to capture an Application's Audio.",
 	"viewer-count": "Total outbound p2p connections of this remote stream",
 	"enter-url-for-widget": "Enter a URL for a page to embed as a sidebar",
@@ -363,7 +363,7 @@ function submitDebugLog(msg=false){
 		var recordResults = session.streamID + "_"+parseInt(Date.now());
 		request.open('POST', "https://reports.vdo.ninja/?name="+recordResults);  //  php, well, whatever.
 		if (!session.cleanOutput){
-			warnUser("Report any details of your bug report to steve@seguin.email, along with the following link: <a target='_blank' onclick='copyFunction(this, event)' href='https://reports.vdo.ninja/?name="+recordResults+"'>https://reports.vdo.ninja/?name="+recordResults+"</a>", false, false);
+			warnUser("Report any details of your bug report to steve@seguin.email, along with the following link: <a target='_blank' onclick='copyFunction(this, event)' href='https://#/?name="+recordResults+"'>https://reports.ninja/?name="+recordResults+"</a>", false, false);
 		}
 		console.log("Report any details of your bug report to steve@seguin.email, along with the following ID: "+recordResults);
 		
